@@ -1,0 +1,10 @@
+# Global tool versions — a project's own .mise.toml / .nvmrc / .java-version wins.
+[tools]
+java = "oracle-graalvm-25"
+jbang = "latest"
+node = "24"
+python = "3.13"
+
+[settings]
+# Read .nvmrc, .node-version, .java-version, .python-version in projects.
+idiomatic_version_file_enable_tools = ["node", "java", "python"]

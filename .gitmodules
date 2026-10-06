@@ -1,3 +1,6 @@
 [submodule "plugins/artisan"]
 	path = plugins/artisan
 	url = git@github.com:jessarcher/zsh-artisan.git
+[submodule "plugins/fzf-tab"]
+	path = plugins/fzf-tab
+	url = https://github.com/Aloxaf/fzf-tab

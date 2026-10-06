@@ -1,0 +1,18 @@
+# Ghostty — https://ghostty.org/docs/config
+theme = Catppuccin Mocha
+font-family = JetBrainsMono Nerd Font
+font-size = 14
+window-padding-x = 10
+window-padding-y = 8
+window-save-state = always
+macos-titlebar-style = tabs
+macos-option-as-alt = true
+shell-integration = zsh
+copy-on-select = clipboard
+cursor-style = bar
+mouse-hide-while-typing = true
+
+keybind = cmd+d=new_split:right
+keybind = cmd+shift+d=new_split:down
+keybind = cmd+shift+enter=toggle_split_zoom
+keybind = global:ctrl+grave_accent=toggle_quick_terminal
