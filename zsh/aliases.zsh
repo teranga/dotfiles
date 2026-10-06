@@ -46,3 +46,10 @@ alias unstage="git restore --staged ."
 
 # JS
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
+
+# Claude Code: the GitHub MCP plugin authenticates with $GITHUB_PERSONAL_ACCESS_TOKEN. Hand it the
+# gh login token only for this process (no PAT to rotate, nothing exported to the shell).
+# A Keychain `github-pat` (shell/secrets.sh) still wins when set.
+claude() {
+  GITHUB_PERSONAL_ACCESS_TOKEN="${GITHUB_PERSONAL_ACCESS_TOKEN:-$(gh auth token 2>/dev/null)}" command claude "$@"
+}
