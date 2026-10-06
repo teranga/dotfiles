@@ -4,6 +4,7 @@ java = "oracle-graalvm-25"
 jbang = "latest"
 node = "24"
 python = "3.13"
+terraform = "1.5.7"
 
 [settings]
 # Read .nvmrc, .node-version, .java-version, .python-version in projects.

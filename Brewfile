@@ -1,3 +1,4 @@
+tap 'pulumi/tap'
 # Taps
 # tap 'homebrew/cask'
 tap 'nicoverbruggen/homebrew-cask'
@@ -148,3 +149,6 @@ brew 'potrace'                  # brand-asset tracing
 brew 'cocoapods'                # Expo iOS builds
 cask 'android-commandlinetools' # Expo Android builds
 cask 'android-platform-tools'   # adb
+
+# Kept for now (discontinued upstream)
+cask 'atom'
