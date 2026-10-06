@@ -1,13 +1,11 @@
 # Taps
-tap 'homebrew/cask'
-tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-versions'
-tap 'homebrew/bundle'
+# tap 'homebrew/cask'
 tap 'nicoverbruggen/homebrew-cask'
-tap 'romkatv/powerlevel10k'
 
 # Binaries
 brew 'awscli'
+brew 'aws-cdk'
+brew 'cdk8s'
 brew 'bash' # Latest Bash version
 brew 'bat' # Used for spatie/visit
 brew 'coreutils' # Those that come with macOS are outdated
@@ -25,9 +23,10 @@ brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'svn' # Needed to install fonts
 brew "zsh-syntax-highlighting"
 brew "zsh-autosuggestions"
-brew "romkatv/powerlevel10k/powerlevel10k"
 brew "pulumi"
 brew 'kind'
+brew 'uv'
+brew 'direnv'
 
 # Spatie Medialibrary
 # brew 'jpegoptim'
@@ -55,7 +54,7 @@ brew 'temporal'
 # cask 'caffeine'
 # cask 'dbngin'
 # cask 'discord'
-cask 'docker'
+cask 'docker-desktop'
 # cask 'figma'
 # cask 'firefox'
 # cask 'github'
@@ -86,19 +85,18 @@ cask 'intellij-idea-ce'
 brew 'maven'
 brew 'gradle'
 # cask 'temurin'
-cask 'temurin19'
+# cask 'temurin19'
+cask 'graalvm-jdk'
 brew 'scala'
 brew 'micronaut'
-brew 'jenv'
 
 # kubernetes
-# cask 'kubectl'
-# cask 'minikube'
+brew 'kubectl'
+brew 'minikube'
 
 # Quicklook
 # cask 'qlmarkdown'
 # cask 'quicklook-json'
-cask 'atom'
 
 # Fonts
 cask 'font-lato'
@@ -122,3 +120,31 @@ cask "font-menlo-for-powerline"
 # mas 'Speedtest', id: 1153157709
 # mas 'Spring', id: 1508706541
 # mas 'Things', id: 904280696
+
+# Terminal (2026 revamp — see README)
+cask 'ghostty'
+cask 'font-jetbrains-mono-nerd-font'
+brew 'starship'      # prompt
+brew 'mise'          # java/node/python versions (replaces sdkman, jenv)
+brew 'fzf'           # fuzzy finder
+brew 'zoxide'        # smarter cd: z, zi
+brew 'eza'           # ls
+brew 'fd'            # find
+brew 'ripgrep'       # grep
+brew 'git-delta'     # git diffs
+brew 'lazygit'       # git TUI
+brew 'atuin'         # searchable shell history
+brew 'yazi'          # file manager
+brew 'btop'          # system monitor
+brew 'tldr'          # short man pages
+brew 'glow'          # markdown in the terminal
+brew 'zellij'        # multiplexer
+brew 'hyperfine'     # benchmark (zsh startup)
+
+# In use but previously missing from this file (so `brew bundle cleanup` would have removed them)
+cask 'session-manager-plugin'   # aws ssm / ecs execute-command
+brew 'libpq'                    # psql
+brew 'potrace'                  # brand-asset tracing
+brew 'cocoapods'                # Expo iOS builds
+cask 'android-commandlinetools' # Expo Android builds
+cask 'android-platform-tools'   # adb
